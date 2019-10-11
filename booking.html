@@ -13,14 +13,14 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500,900|Raleway&display=swap" rel="stylesheet">
 
-  <title>WhatToDo</title>
+  <title>Check you bookings</title>
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">WhatToDo</a>
+      <a class="navbar-brand" href="index.html">MoviePoint</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,20 +40,48 @@
     </div>
   </nav>
 
-
+  
   <!-- Main stuff -->
   <div class="container">
 
     <!-- Form -->
-    <form class="form">
+    <div class="form">
       <div class="form-group">
         <label for="exampleInputEmail1">Phone No.</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone No.">
-
+        <input type="text" class="form-control" id="iemail" aria-describedby="emailHelp" placeholder="Enter Phone No.">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+      <button class="btn btn-primary" onclick="getnum()">Submit</button>
+    </div>
 
+    <div id="nona" class="card-body">
+
+    </div>
+    <script>
+      function getnum() {
+        hon = document.getElementById("iemail").value
+        console.log("hi")
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            for(x in myObj.users){
+                u = myObj.users[x]
+                if(hon == u.phone){
+                  document.getElementById("nona").innerHTML += '<br><h2>'+u.name+'</h2><br>';
+                  for (j in u.booked){
+                    console.log(Object.keys(u.booked[j])[0]);
+                    document.getElementById("nona").innerHTML += '<strong>'+Object.keys(u.booked[j])[0] + '</strong> : ' + Object.values(u.booked[j])[0]+' Tickets <br> ';
+                  }
+                  document.getElementById("nona").innerHTML += '<button type="button" class="btn btn-info btn-lg bookNow" style="margin-top:1rem;">Sell Your tickets</button>'
+                }
+               }
+        }
+        };
+        xmlhttp.open("GET", "https://api.myjson.com/bins/1ga39a", true);
+        xmlhttp.send();
+        }
+      </script>
+  
 
   </div>
 

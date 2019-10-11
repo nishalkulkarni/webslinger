@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>MoviePoint - Easy movie Bookings</title>
 
 
   <!-- Bootstrap CSS -->
@@ -24,22 +24,22 @@
             for(x in myObj.movies){
                 u = myObj.movies[x]
                 console.log(u.name);
-                document.getElementById("movie-card").innerHTML += '<div class="cardItem"><div class="card" style="width: 18rem;"><img src="'+u.image+'" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+u.name+'</h5><p class="card-text">'+u.description+'</p><a href="#" class="btn btn-primary">Book Now!</a></div></div></div>';
+                document.getElementById("movie-card").innerHTML += '<div class="cardItem"><div class="card" style="width: 18rem;"><img src="'+u.image+'" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+u.name+'</h5><p class="card-text">'+u.description+'</p>Rating : <strong>'+u.rating+'/5</strong> stars<p></p><a href="'+u.link+'" class="btn btn-primary">Book Now</a></div></div></div>';
                 document.getElementById("c-inner").innerHTML += '<div class="carousel-item"><div class="card bg-dark text-white"><img src="'+u.image+'" class="card-img" alt="JOKER"><div class="card-img-overlay"><h5 class="card-title">'+u.name+'</h5><p class="card-text">'+u.description+'</p></div></div></div>';
                 document.getElementById("c-indic").innerHTML += '<li data-target="#carouselExampleIndicators" data-slide-to="'+(x+1)+'"></li>'
             }
         }
         };
-        xmlhttp.open("GET", "https://api.myjson.com/bins/tcwgu", true);
+        xmlhttp.open("GET", "https://api.myjson.com/bins/a6yi6", true);
         xmlhttp.send();
 </script>
     </script>
   </head>
   <body>
       <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navBarSearch">
         <div class="container">
-          <a class="navbar-brand" href="#">WhatToDo</a>
+          <a class="navbar-brand" href="#">MoviePoint</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +48,7 @@
     
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
             </form>
             <ul class="navbar-nav ml-auto mybookings">
               <li class="nav-item active">

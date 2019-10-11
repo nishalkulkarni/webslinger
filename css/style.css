@@ -11,6 +11,13 @@ h6 {
   font-family: Montserrat;
 }
 
+#navBarSearch input[type=search]{
+  width:480px !important;
+}
+.checked{
+  color:orange;
+}
+
 .mybookings {
   margin-right: 60px;
 }

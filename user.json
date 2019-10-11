@@ -1,0 +1,22 @@
+{
+    "users": [
+      {
+        "name": "Nishal Kulkarni",
+        "phone": "8237394877",
+        "booked": [
+            {"Joker" : 4},
+            {"Homealone" : 2},
+            {"Avengers - Endgame" : 4}
+        ]
+      },
+      {
+        "name": "Pranav Raaghav",
+        "phone": "9876543210",
+        "booked": [
+            {"Joker" : 1},
+            {"Homealone" : 2}
+        ]
+      }
+    ]
+  }
+  

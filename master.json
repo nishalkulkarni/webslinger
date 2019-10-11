@@ -5,13 +5,14 @@
       "description": "the final battle",
       "rating": 3.5,
       "image": "images/avengers.jpg",
+      "link" : "bookpage.html",
       "popularity": 85,
       "halls": {
         "Vishnu Cinemas": {
           "tickets": 200,
           "price": 150,
           "location": "new bus stand",
-          "link": "https://www.w3schools.com/js/js_json_datatypes.asp"
+          "link": "bookpage.html"
         },
         "PVR Cinemas": {
           "tickets": 100,
@@ -23,9 +24,10 @@
     },
     {
       "name": "Joker",
-      "description": "Badass movie  by Joaquin Phoenix",
+      "description": "Badass movie by Joaquin",
       "rating": 4.5,
       "image": "images/joker.jpg",
+      "link" : "bookpage.html",
       "popularity": 98,
       "halls": {
         "Vishnu Cinemas": {
@@ -47,6 +49,7 @@
       "description": "Jackie Chan is back to tickle you",
       "rating": 3,
       "image": "images/rushhour.jpg",
+      "link" : "bookpage.html",
       "popularity": 65,
       "halls": {
         "Vishnu Cinemas": {
@@ -68,6 +71,7 @@
       "description": "family entertainment",
       "rating": 4,
       "image": "images/homealone.jpg",
+      "link" : "bookpage.html",
       "popularity": 98,
       "halls": {
         "Vishnu Cinemas": {
