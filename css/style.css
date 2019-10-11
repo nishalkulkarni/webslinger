@@ -1,0 +1,82 @@
+body {
+  font-family: Raleway;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat;
+}
+
+.mybookings {
+  margin-right: 60px;
+}
+
+/* Carousel */
+.carousel-item {
+  height: 300px;
+}
+
+img {
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  height: 300px;
+  overflow: auto;
+}
+
+.carousel-inner .item img {
+  margin: 0 auto;
+}
+
+/* Upcoming */
+.upcoming {
+  padding: 30px;
+  text-align: center;
+}
+
+.upcoming-item {
+  border: 5px;
+  border-radius: 2px;
+  border-color: black;
+}
+
+/* Movie cards */
+.movieCard .card {
+  display: inline-block;
+  margin: 0 auto 0 auto;
+}
+
+.cardItem {
+  padding: 0 1rem 2rem 0;
+  display: inline-block;
+}
+
+/* Forms */
+.form {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.form input[type="text"] {
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* Final Booking Page */
+.bookingImage img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.bookingContent {
+  margin-top: 5%;
+}
+
+.bookNow {
+  width: 40%;
+}
