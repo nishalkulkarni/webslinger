@@ -42,13 +42,13 @@
 
   
   <!-- Main stuff -->
-  <div class="container">
+  <div class="container container2 "  >
 
     <!-- Form -->
-    <div class="form">
+    <div class="form" style="padding: 10% 0;">
       <div class="form-group">
         <label for="exampleInputEmail1">Phone No.</label>
-        <input type="text" class="form-control" id="iemail" aria-describedby="emailHelp" placeholder="Enter Phone No.">
+        <input type="text" class="form-control" id="iemail" aria-describedby="emailHelp" placeholder="Enter verified Phone No.">
       </div>
       <button class="btn btn-primary" onclick="getnum()">Submit</button>
     </div>
@@ -72,7 +72,7 @@
                     console.log(Object.keys(u.booked[j])[0]);
                     document.getElementById("nona").innerHTML += '<strong>'+Object.keys(u.booked[j])[0] + '</strong> : ' + Object.values(u.booked[j])[0]+' Tickets <br> ';
                   }
-                  document.getElementById("nona").innerHTML += '<button type="button" class="btn btn-info btn-lg bookNow" style="margin-top:1rem;">Sell Your tickets</button>'
+                  document.getElementById("nona").innerHTML += '<a href="selltick.html" type="button" class="btn btn-info btn-lg bookNow" style="margin-top:1rem;">Sell Your tickets</a>'
                 }
                }
         }
